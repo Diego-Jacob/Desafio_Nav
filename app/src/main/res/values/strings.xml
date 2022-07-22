@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Desafio_Nav</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textView_primeiroFrag">Pense em um número de 0 a 10\nTente adivinhar!</string>
+    <string name="button_primeiroFrag">Continuar</string>
+    <string name="textView_segundoFrag">Seu chute foi muito alto\nTente Novamente</string>
+    <string name="button_segundoFrag">Tentar Novamente</string>
+    <string name="textView_terceiroFrag">Seu chute foi muito baixo\nTente Novamente</string>
+    <string name="button_terceiroFrag">Tentar Novamente</string>
+    <string name="textView_quartoFrag">Parabéns!\nVocê Acertou!!!\n\\o/</string>
+    <string name="button_quartoFrag">Tela Inicial</string>
+
+</resources>

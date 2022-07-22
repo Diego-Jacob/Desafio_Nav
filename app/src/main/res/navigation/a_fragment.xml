@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a_fragment"
+    app:startDestination="@id/primeiro_Fragment">
+
+    <fragment
+        android:id="@+id/primeiro_Fragment"
+        android:name="br.kurtzz.com.impacta.desafio_nav.Primeiro_Fragment"
+        android:label="fragment_primeiro_"
+        tools:layout="@layout/fragment_primeiro_" >
+        <action
+            android:id="@+id/action_primeiro_Fragment_to_segundo_Fragment2"
+            app:destination="@id/segundo_Fragment" />
+        <action
+            android:id="@+id/action_primeiro_Fragment_to_terceiro_Fragment2"
+            app:destination="@id/terceiro_Fragment" />
+        <action
+            android:id="@+id/action_primeiro_Fragment_to_quarto_Fragment2"
+            app:destination="@id/quarto_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundo_Fragment"
+        android:name="br.kurtzz.com.impacta.desafio_nav.segundo_Fragment"
+        android:label="fragment_segundo_"
+        tools:layout="@layout/fragment_segundo_" >
+        <action
+            android:id="@+id/action_segundo_Fragment_to_primeiro_Fragment2"
+            app:destination="@id/primeiro_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terceiro_Fragment"
+        android:name="br.kurtzz.com.impacta.desafio_nav.terceiro_Fragment"
+        android:label="fragment_terceiro_"
+        tools:layout="@layout/fragment_terceiro_" >
+        <action
+            android:id="@+id/action_terceiro_Fragment_to_primeiro_Fragment3"
+            app:destination="@id/primeiro_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quarto_Fragment"
+        android:name="br.kurtzz.com.impacta.desafio_nav.quarto_Fragment"
+        android:label="fragment_quarto_"
+        tools:layout="@layout/fragment_quarto_" >
+        <action
+            android:id="@+id/action_quarto_Fragment_to_primeiro_Fragment2"
+            app:destination="@id/primeiro_Fragment" />
+    </fragment>
+</navigation>
