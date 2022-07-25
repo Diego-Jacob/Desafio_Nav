@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_primeiro_Fragment_to_quarto_Fragment2"
             app:destination="@id/quarto_Fragment" />
+        <argument
+            android:name="random"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/segundo_Fragment"
@@ -28,6 +31,12 @@
         <action
             android:id="@+id/action_segundo_Fragment_to_primeiro_Fragment2"
             app:destination="@id/primeiro_Fragment" />
+        <argument
+            android:name="random"
+            app:argType="integer" />
+        <argument
+            android:name="texto"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/terceiro_Fragment"
@@ -37,6 +46,12 @@
         <action
             android:id="@+id/action_terceiro_Fragment_to_primeiro_Fragment3"
             app:destination="@id/primeiro_Fragment" />
+        <argument
+            android:name="random"
+            app:argType="integer" />
+        <argument
+            android:name="texto"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/quarto_Fragment"
@@ -46,5 +61,11 @@
         <action
             android:id="@+id/action_quarto_Fragment_to_primeiro_Fragment2"
             app:destination="@id/primeiro_Fragment" />
+        <argument
+            android:name="texto"
+            app:argType="string" />
     </fragment>
+    <argument
+        android:name="random"
+        android:defaultValue="0" />
 </navigation>

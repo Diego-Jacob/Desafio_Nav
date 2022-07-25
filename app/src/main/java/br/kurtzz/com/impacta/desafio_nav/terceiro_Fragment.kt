@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import br.kurtzz.com.impacta.desafio_nav.databinding.FragmentTerceiroBinding
 
 
@@ -13,6 +14,7 @@ class terceiro_Fragment : Fragment() {
 
     private var _binding: FragmentTerceiroBinding? = null
     private val binding: FragmentTerceiroBinding get() = _binding!!
+    private val args: terceiro_FragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,8 +26,12 @@ class terceiro_Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        var texto = args.texto
+        var random = args.random
+        binding.textViewTerceiroFrag.text = "$texto\n${random.toInt()}"
         binding.buttonTerceiroFrag.setOnClickListener{
-            findNavController().navigate(R.id.action_terceiro_Fragment_to_primeiro_Fragment3)
+            var action = terceiro_FragmentDirections.actionTerceiroFragmentToPrimeiroFragment3(random)
+            findNavController().navigate(action)
         }
     }
 
