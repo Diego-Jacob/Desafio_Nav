@@ -28,7 +28,7 @@ class segundo_Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         var random = args.random
         var texto = args.texto
-        binding.textViewSegundoFrag.text = "$texto\n${random.toInt()}"
+        binding.textViewSegundoFrag.text = texto
 
         binding.buttonSegundoFrag.setOnClickListener {
             var action = segundo_FragmentDirections.actionSegundoFragmentToPrimeiroFragment2(random)

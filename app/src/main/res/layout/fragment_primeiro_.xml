@@ -40,14 +40,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
-    <TextView
-        android:id="@+id/textView_teste"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Número Random"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_primeiroFrag"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>

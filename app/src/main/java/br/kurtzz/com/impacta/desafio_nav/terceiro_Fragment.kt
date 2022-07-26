@@ -28,7 +28,7 @@ class terceiro_Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         var texto = args.texto
         var random = args.random
-        binding.textViewTerceiroFrag.text = "$texto\n${random.toInt()}"
+        binding.textViewTerceiroFrag.text = texto
         binding.buttonTerceiroFrag.setOnClickListener{
             var action = terceiro_FragmentDirections.actionTerceiroFragmentToPrimeiroFragment3(random)
             findNavController().navigate(action)

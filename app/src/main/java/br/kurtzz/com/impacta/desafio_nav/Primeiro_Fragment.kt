@@ -31,35 +31,37 @@ class Primeiro_Fragment : Fragment() {
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var numeroRandom = Random.nextInt(0,10)
-        var guardaRandom: Int = numeroRandom
         var random: Int = args.random
 
+       val numeroRandom = if (random == -1)
+       { Random.nextInt(0,10)} else
+       {random}
 
-        //if (random != numeroRandom) guardaRandom = random
-
-        binding.textViewTeste.text = numeroRandom.toString() + random
+        Toast.makeText(context,"Número digitado: $numeroRandom e $random", Toast.LENGTH_SHORT).show()
 
         binding.buttonPrimeiroFrag.setOnClickListener {
 
-            var numeroDigitado = binding.editTextNumber.text.toString().toInt()
-            if (binding.editTextNumber.text.toString() == null) {
-                Toast.makeText(context,"Digite um número", Toast.LENGTH_SHORT).show()
-            }else
-            if (numeroDigitado == guardaRandom) {
+            if (binding.editTextNumber.text.isEmpty())
+            {
+                binding.editTextNumber.error = "Digite um número."
+            } else
+            if (binding.editTextNumber.text.toString().toInt() == numeroRandom)
+            {
                 var texto = "Parabéns\nVocê Acertou!!!"
                 var action = Primeiro_FragmentDirections.actionPrimeiroFragmentToQuartoFragment2(texto)
-                findNavController().navigate(action)}else
-            if (numeroDigitado > guardaRandom)
+                findNavController().navigate(action)
+            } else
+            if (binding.editTextNumber.text.toString().toInt() > numeroRandom)
             {
                 var texto = "Chute muito alto\nTente de novo!!"
-                var action = Primeiro_FragmentDirections.actionPrimeiroFragmentToSegundoFragment2(guardaRandom, texto)
-                findNavController().navigate(action)}
-            else
+                var action = Primeiro_FragmentDirections.actionPrimeiroFragmentToSegundoFragment2(numeroRandom, texto)
+                findNavController().navigate(action)
+            } else
             {
                 var texto = "Chute muito baixo\nTente de novo!!"
-                var action = Primeiro_FragmentDirections.actionPrimeiroFragmentToTerceiroFragment2(guardaRandom, texto)
-                findNavController().navigate(action)}
+                var action = Primeiro_FragmentDirections.actionPrimeiroFragmentToTerceiroFragment2(numeroRandom, texto)
+                findNavController().navigate(action)
+            }
         }
     }
 
